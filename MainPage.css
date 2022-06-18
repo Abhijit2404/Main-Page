@@ -1,0 +1,170 @@
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  text-align: center;
+  margin: .7em 4em 0 4em;
+  border: 1px solid black;
+  border-radius:5px;
+  padding:1em;
+  letter-spacing: .5px;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+div{
+  padding-top:1em;
+  border-radius:5px;
+}
+
+.header {
+  margin-bottom: 1em;
+  border-bottom: 3px solid black;
+  text-align:left;
+  padding: 0;
+  font-weight: bold;
+}
+
+.main {
+  text-align: center;
+  margin-left: 2em;
+  margin-right: 2em;
+  height: 35em;
+  overflow: auto;
+  border: 1px solid black;
+  border-radius:5px;
+}
+
+.aside-1 {
+  height: 15em;
+  padding:0;
+}
+
+.choose-file{
+  height: 11em;
+  padding:.3em;
+  border: 1px solid black;
+}
+
+.browse{
+  text-align:right;
+  margin-bottom:.8em;
+}
+
+input[type="text"]{
+  margin-right: .2em;
+  height: 25px;
+  width: 67%;
+  border-radius: 3px;
+}
+
+input[type="text"]::placeholder{
+  color: black;
+  font-weight: bold;
+  font-size:.8em;
+}
+
+input[type="file"]{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display:none;
+}
+
+input[type="file"] + label{
+  display:inline-block;
+  padding: .4em;
+  background-color: rgb(68, 131, 226);
+  border:solid 1px #666F77;
+  border-radius: 5px;
+  color:white;
+  cursor: pointer;
+}
+
+select{
+  width:100%;
+  margin-bottom:1em;
+  padding:0;
+  height:2.2em;
+  border-radius: 4px;
+}
+
+.function-desp{
+  margin-top: .6em;
+  height: 22.9em;
+  border: 1px solid black;
+  overflow: auto;
+}
+
+.function-container{
+  text-align: left;
+  font-size: 1.3em;
+}
+
+.individual-functions{
+  padding-left: 1em;
+}
+
+input[type="checkbox"]{
+  width:20px;
+  height:20px;
+  margin-bottom: .4em;
+}
+
+:checked + label{
+  color:rgb(68, 131, 226);
+}
+
+.aside-2 {
+  height: 20em;
+  padding: 0;
+}
+
+.exp-output{
+  height:20em;
+  border: 1px solid black;
+  overflow: auto;
+}
+
+.notification-email{
+  margin-top:0.6em;
+  height:6em;
+  border: 1px solid black;
+}
+
+input[type="email"]{
+  margin-top: 1.2em;
+  width: 80%;
+  height: 2em;
+  font-size: 1em;
+}
+
+button{
+  margin-top: .6em;
+  width:100%;
+  height:5.7em;
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: rgb(68, 131, 226);
+  border-radius: 8px;
+  border:solid 1px #666F77;
+  color: white;
+  cursor: pointer;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+body {
+  font-family: 'Roboto', sans-serif; 
+}
